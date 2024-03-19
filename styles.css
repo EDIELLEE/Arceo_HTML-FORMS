@@ -1,12 +1,14 @@
-* {
+* 
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
+body 
+{
     color: #5D6063;
-    background-color: #EAEDF0;
+    background-color: #604868;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     line-height: 1.3;
@@ -15,31 +17,36 @@ body {
     align-items: center;
 }
 
-.speaker-form-header {
+.speaker-form-header 
+{
     text-align: center;
     background-color: #F6F7F8;
     border: 1px solid #D6D9DC;
-    border-radius: 3px;
+    border-radius: 20px;
     width: 80%;
-    margin: 40px 0;
+    margin-top: 50px;
+    margin-bottom: 10px;
     padding: 50px;
 }
 
-.speaker-form-header h1 {
+.speaker-form-header h1 
+{
     font-size: 30px;
     margin-bottom: 20px;
 }
 
-.speaker-form {
+.speaker-form 
+{
     background-color: #F6F7F8;
     border: 1px solid #D6D9DC;
-    border-radius: 3px;
+    border-radius: 20px;
     width: 80%;
-    margin: 40px 0;
-    padding: 50px;
+    margin: 40px 0px;
+    padding: 50px 80px;
 }
 
-.form-row {
+.form-row 
+{
     margin-bottom: 40px;
     display: flex;
     justify-content: flex-start;
@@ -47,47 +54,181 @@ body {
     flex-wrap: wrap;
 }
 
+.form-row label 
+{
+    margin-bottom: 10px;
+}
+
 .form-row input[type="text"],
-.form-row input[type="email"] {
+.form-row input[type="email"] 
+{
     background-color: #FFFFFF;
     border: 1px solid #D6D9DC;
-    border-radius: 3px;
+    border-radius: 20px;
     width: 10%;
-    padding: 15px;
+    padding: 10px;
     font-size: 14px;
 }
 
-.form-row label {
-    margin-bottom: 15px;
+.form-row label[for="abstract"] 
+{
+    text-align: center;
+    margin-bottom: 10px;
 }
 
-@media only screen and (min-width: 650px) {
+.form-row select
+{
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.form-row textarea 
+{
+    font-family: "Helvetica","Arial", sans-serif;
+    font-size: 14px;
+
+    width: 250px;
+
+    border-width: 100px;
+    border: 2px solid #D6D9DC;
+    border-radius: 20px;
+
+    min-height: 200px;
+    margin-bottom: 20px;
+    padding: 10px;
+    resize: none;
+}
+
+.form-row .instructions
+{
+    color: #999999;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.form-row .instructions
+{
+    margin-bottom: 0px;
+}
+
+.form-row .checkbox-label
+{
+    margin-bottom: 0px;
+}
+
+.form-row label[for='t-shirt'] 
+{
+    width: 100px; 
+    text-align: right; 
+    margin-right: 25px;
+    margin-top: 5px; 
+}
+
+.form-row select#t-shirt 
+{
+    display: inline-flex;
+    width: calc(100% - 140px); 
+}
+
+.legacy-form-row 
+{
+    display: inline;
+    border: none;
+    margin-bottom: 40px;
+}
+
+.legacy-form-row legend 
+{
+    margin-bottom: 1px;
+    color: gray;
+}
+
+.legacy-form-row .radio-label 
+{
+    display: block;
+    font-size: 14px;
+    color: gray;
+    padding: 0 20px 0 10px;
+}
+
+.legacy-form-row input[type='radio'] 
+{
+    margin-top: 2px;
+}
+
+.legacy-form-row .radio-label,
+.legacy-form-row input[type='radio'] 
+{
+    float: center;
+}
+
+.radio-container
+{
+    display: inline-flex;
+    border: none;
+}
+
+.radio-container label 
+{
+    margin-left: 25px;
+}
+
+@media only screen and (min-width: 700px) 
+{
     .speaker-form-header,
-    .speaker-form {
+    .speaker-form 
+    {
         width: 600px;
     }
-    .form-row {
+    .form-row 
+    {
         flex-direction: row;
         align-items: flex-start;
         margin-bottom: 20px;
-        height: initial;
+        margin-left: 10px; /* to center the input */
+        float: center;
+        border: 0px;
     }
     .form-row input[type="text"],
-    .form-row input[type="email"] {
+    .form-row input[type="email"] 
+    {
         width: 250px;
         height: initial;
     }
-    .form-row label {
+    .form-row label 
+    {
         text-align: right;
         width: 120px;
-        margin-top: 2px;
+        margin-top: 8px;
         padding-right: 20px;
     }
-}
-
-.form-row input[type="text"]:invalid,
-.form-row input[type="email"]:invalid {
-    border: 1px solid #D55C5F;
-    color: #D55C5F;
-    box-shadow: none;
+    .legacy-form-row 
+    {
+        margin-bottom: 10px;
+        float: inline-start;
+        width: 800px;
+    }
+    .legacy-form-row legend 
+    {
+        float:left;
+        padding: 10px;
+        margin:10px;
+    }
+    .form-row input[type='text']:invalid,
+    .form-row input[type='email']:invalid 
+    {
+        border: 1px solid #D55C5F;
+        color: #D55C5F;
+        box-shadow: none;
+    }
+    .form-row .checkbox-label 
+    {
+        margin-left: 60px;
+        width: auto;
+    }
+    .form-row .instructions 
+    {
+        margin-left: 80px;
+    }
 }
